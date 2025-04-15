@@ -13,7 +13,9 @@
     <body>
         <livewire:components.navbar >
         {{ $slot }}
-        @livewireScripts
 
+        <livewire:components.footer>
+        @livewireScripts
+       
     </body>
 </html>
