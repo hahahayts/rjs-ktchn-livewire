@@ -30,6 +30,9 @@ class Login extends Component
         if(Auth::attempt(['email'=> $this->email, 'password' => $this->password])){
             session()->regenerate();
 
+            if(Auth::user()->hasRole('admin')){
+                return redirect('/admin/dashboard');
+            }
             return redirect('/products');
 
         }
