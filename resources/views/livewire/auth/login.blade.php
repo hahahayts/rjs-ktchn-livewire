@@ -94,12 +94,13 @@
                 type="submit" 
                 class="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 rounded-lg transition duration-200"
             >
-                Sign In
+              <span wire:loading.class='hidden'>  Sign in</span>
+              <span wire:loading>  Signing in...</span>
             </button>
         </form>
         
         <div class="text-center mt-6">
-            <p class="text-gray-600 text-sm">Don't have an account? <a href="#" wire:click.prevent="showRegister" class="text-red-600 font-medium hover:text-red-800">Sign up</a></p>
+            <p class="text-gray-600 text-sm">Don't have an account? <a href="{{ url('/register') }}" wire:click.prevent="showRegister" class="text-red-600 font-medium hover:text-red-800">Sign up</a></p>
         </div>
     </div>
 </div>

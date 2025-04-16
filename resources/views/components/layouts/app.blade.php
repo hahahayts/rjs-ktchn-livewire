@@ -9,10 +9,15 @@
         @livewireStyles
     </head>
     <body>
+        @if (request()->path() == 'login' || request()->path() == 'register')
+        {{ $slot }}    
+        @else
         <livewire:components.navbar >
-        {{ $slot }}
+            {{ $slot }}
+        <livewire:components.footer>   
+        @endif
 
-        <livewire:components.footer>
+       
         @livewireScripts
        
     </body>
