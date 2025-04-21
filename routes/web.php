@@ -1,10 +1,13 @@
 <?php
 
 use App\Livewire\AdminPage\Dashboard;
+use App\Livewire\AdminPage\Order;
+use App\Livewire\AdminPage\ProductAdminPage;
 use App\Livewire\Auth\LoginPage;
 use App\Livewire\Auth\RegisterPage;
 use App\Livewire\UserPage\AboutPage;
 use App\Livewire\UserPage\LandingPage;
+use App\Livewire\UserPage\OrderPageUser;
 use App\Livewire\UserPage\ProductsPage;
 use Illuminate\Support\Facades\Route;
 
@@ -25,12 +28,19 @@ Route::middleware(['guest'])->group(function(){
 Route::middleware(['auth'])->group(function(){
 
     // For Normal User
-Route::get('/products', ProductsPage::class);
+    Route::middleware(['can:user'])->group(function(){
+        Route::get('/products',ProductsPage::class);
+        Route::get('/order',OrderPageUser::class);
+    });
+
 
 
 
 // For Admin
 Route::middleware(['can:admin'])->group(function(){
+    Route::get('/admin', Dashboard::class);
     Route::get('/admin/dashboard', Dashboard::class);
+    Route::get('/admin/orders', Order::class);
+    Route::get('/admin/products', ProductAdminPage::class);
 });
 });

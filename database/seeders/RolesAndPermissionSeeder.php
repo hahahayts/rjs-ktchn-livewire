@@ -16,6 +16,7 @@ class RolesAndPermissionSeeder extends Seeder
     {
          // Create Permissions
          $admin = Permission::create(['name'=>'admin']);
+         $user = Permission::create(['name'=>'user']);
          $viewOrders = Permission::create(['name' => 'view-orders']);
          $manageOrders = Permission::create(['name' => 'manage-events']);
          $manageTransactions = Permission::create(['name' => 'manage-transactions']);
@@ -27,7 +28,7 @@ class RolesAndPermissionSeeder extends Seeder
  
          // Assign Permissions to Roles
          $adminRole->givePermissionTo([$admin, $viewOrders, $manageOrders, $manageTransactions, $manageUsers]);
-         $userRole->givePermissionTo([$viewOrders]);
+         $userRole->givePermissionTo([$user, $viewOrders]);
  
          // Create Users
          $adminUser = User::create([

@@ -5,9 +5,15 @@
             
             @guest          
             <ul class="flex gap-6 items-center">
-                <li><a href="/" class="hover:text-yellow-200 transition-colors">Home</a></li>
-                <li><a href="/location" class="hover:text-yellow-200 transition-colors">Location</a></li>
-                <li><a href="/about" class="hover:text-yellow-200 transition-colors">Why RJ's KTCHN</a></li>           
+                <li>
+                    <a href="/" wire:navigate class="hover:text-yellow-200 transition-colors">Home</a>
+                </li>
+                <li>
+                    <a href="/location" wire:navigate class="hover:text-yellow-200 transition-colors">Location</a>
+                </li>
+                <li>
+                    <a href="/about" wire:navigate class="hover:text-yellow-200 transition-colors">Why RJ's KTCHN</a>
+                </li>           
             </ul>
             @endguest
         </div>
@@ -18,13 +24,13 @@
             @endguest
 
             @auth
-                <a href="/cart" class="relative hover:text-yellow-200 transition-colors">
+                <a href="/order" wire:navigate class="relative hover:text-yellow-200 transition-colors">
                     <span class="text-2xl">🛒</span>
                     <span class="absolute -top-1 -right-1 bg-yellow-400 text-red-600 text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                         {{ $cartCount ?? 0 }}
                     </span>
                 </a>
-                <livewire:auth.logout />
+                <livewire:auth.logout />    
             @endauth
         </div>
     </nav>

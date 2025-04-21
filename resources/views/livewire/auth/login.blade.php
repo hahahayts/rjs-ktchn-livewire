@@ -3,7 +3,7 @@
     <div>  
         <button 
             wire:click="toggleModal" 
-            class="py-2 px-5 border border-yellow-600 transition-colors hover:bg-yellow-600 hover:text-white rounded-xl font-medium"
+            class="py-2 px-5   transition-colors hover:bg-yellow-600 hover:text-white rounded-xl font-medium"
         >
             Login
         </button>      
@@ -100,7 +100,7 @@
         </form>
         
         <div class="text-center mt-6">
-            <p class="text-gray-600 text-sm">Don't have an account? <a href="{{ url('/register') }}" wire:click.prevent="showRegister" class="text-red-600 font-medium hover:text-red-800">Sign up</a></p>
+            <p class="text-gray-600 text-sm">Don't have an account? <a href="{{ url('/register') }}" wire:navigate class="text-red-600 font-medium hover:text-red-800">Sign up</a></p>
         </div>
     </div>
 </div>

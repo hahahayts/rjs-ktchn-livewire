@@ -26,13 +26,7 @@
       </div>
 
       <div class="md:w-1/2 relative">
-        {{-- <Image
-          src="/images/founder-cooking.jpg"
-          alt="Founder cooking"
-          width={600}
-          height={400}
-          class="rounded-2xl shadow-lg object-cover"
-        /> --}}
+       
         <img src="{{ asset('assets/founder-cooking.jpg') }}" alt="founder" class="rounded-2xl shadow-lg object-cover " width="600" height="400">
       </div>
     </section>

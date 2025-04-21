@@ -24,6 +24,8 @@ class User extends Authenticatable
         'password',
     ];
 
+  
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -33,6 +35,11 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function orderItems()
+    {
+        return $this->hasMany(OrderItem::class);
+    }
 
     /**
      * Get the attributes that should be cast.

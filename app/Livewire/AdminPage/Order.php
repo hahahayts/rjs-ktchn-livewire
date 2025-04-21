@@ -4,10 +4,10 @@ namespace App\Livewire\AdminPage;
 
 use Livewire\Component;
 
-class Sidebar extends Component
+class Order extends Component
 {
     public function render()
     {
-        return view('livewire.admin-page.sidebar');
+        return view('livewire.admin-page.order');
     }
 }
