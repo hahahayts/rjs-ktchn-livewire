@@ -4,10 +4,12 @@ namespace App\Livewire\UserPage;
 
 use App\Models\OrderItem;
 use App\Models\Product;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 class ProductsPage extends Component
 {
+    #[Title('Products')]    
     public $products;
 
     public function mount(){

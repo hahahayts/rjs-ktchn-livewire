@@ -17,7 +17,7 @@
                 <img src="{{ Storage::url('products/' . $p->image) }}" alt="{{ $p->name }}" class="w-full h-64 object-cover">
             </div>
             <div class="p-4">
-                <h2 class="text-xl font-bold text-gray-800 capitalize">{{$p->name}}</h2>
+                <h2 class="w-full text-xl font-bold text-gray-800 truncate capitalize ">{{$p->name}}</h2>
                 <p class="text-gray-500 text-sm truncate capitalize">{{$p->description}}</p>
                 <div class="mt-2 flex justify-between items-center">
                     <p class="text-lg font-semibold text-orange-600">₱{{$p->price}}</p>

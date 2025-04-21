@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\AdminPage\Dashboard;
+use App\Livewire\AdminPage\ManageUsersPage;
 use App\Livewire\AdminPage\Order;
 use App\Livewire\AdminPage\ProductAdminPage;
 use App\Livewire\Auth\LoginPage;
@@ -42,5 +43,6 @@ Route::middleware(['can:admin'])->group(function(){
     Route::get('/admin/dashboard', Dashboard::class);
     Route::get('/admin/orders', Order::class);
     Route::get('/admin/products', ProductAdminPage::class);
+    Route::get('/admin/manage-users', ManageUsersPage::class);
 });
 });

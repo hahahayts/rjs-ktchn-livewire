@@ -3,7 +3,7 @@
     <h2 class="text-2xl font-bold mb-6">Dashboard Overview</h2>
     
     <!-- Stats cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         <div class="bg-white rounded-lg shadow p-6">
             <div class="flex items-center">
                 <div class="p-3 rounded-full bg-indigo-600 bg-opacity-75">
@@ -19,7 +19,7 @@
             </div>
         </div>
         
-        <div class="bg-white rounded-lg shadow p-6">
+        {{-- <div class="bg-white rounded-lg shadow p-6">
             <div class="flex items-center">
                 <div class="p-3 rounded-full bg-green-600 bg-opacity-75">
                     <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -28,11 +28,11 @@
                 </div>
                 <div class="ml-4">
                     <h3 class="text-gray-500 text-sm">New Customers Today</h3>
-                    {{-- <p class="text-2xl font-semibold text-gray-800">{{ $statistics['newCustomersToday'] }}</p> --}}
+                    <p class="text-2xl font-semibold text-gray-800">{{ $statistics['newCustomersToday'] }}</p>
                     <p class="text-2xl font-semibold text-gray-800">20</p>
                 </div>
             </div>
-        </div>
+        </div> --}}
         
         <div class="bg-white rounded-lg shadow p-6">
             <div class="flex items-center">
